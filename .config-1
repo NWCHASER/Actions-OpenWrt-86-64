@@ -2,7 +2,7 @@ CONFIG_TARGET_x86=y
 CONFIG_TARGET_x86_64=y
 CONFIG_TARGET_x86_64_DEVICE_generic=y
 # openclash
-CONFIG_PACKAGE_dnsmasq-full=y
+# CONFIG_PACKAGE_dnsmasq-full=y
 CONFIG_PACKAGE_coreutils-nohup=y
 CONFIG_PACKAGE_bash=y
 CONFIG_PACKAGE_curl=y
@@ -30,3 +30,5 @@ CONFIG_VDI_IMAGES=y
 CONFIG_VMDK_IMAGES=y
 # ddns script
 CONFIG_PACKAGE_drill=y
+# enlarge
+CONFIG_TARGET_ROOTFS_PARTSIZE=1024
