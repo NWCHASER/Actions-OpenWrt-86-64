@@ -15,7 +15,7 @@ sed -i 's/192.168.1.1/192.168.1.253/g' package/base-files/files/bin/config_gener
 
 # Modify default size
 rm target/linux/ipq806x/files/arch/arm/boot/dts/qcom-ipq8064-r7500.dts
-mv files/qcom-ipq8064-r7500.dts target/linux/ipq806x/files/arch/arm/boot/dts/
+mv files/22.03/qcom-ipq8064-r7500.dts target/linux/ipq806x/files/arch/arm/boot/dts/
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
