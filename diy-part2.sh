@@ -14,6 +14,10 @@
 #sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 
 # Modify default size
-#cd openwrt
-#rm target/linux/ipq806x/files-5.15/arch/arm/boot/dts/qcom-ipq8064-r7500.dts
-#mv files/qcom-ipq8064-r7500.dts target/linux/ipq806x/files-5.15/arch/arm/boot/dts/
+rm target/linux/ipq806x/files-5.15/arch/arm/boot/dts/qcom-ipq8064-r7500.dts
+mv files/qcom-ipq8064-r7500.dts target/linux/ipq806x/files-5.15/arch/arm/boot/dts/
+
+# Add kernel build user
+[ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
+    echo 'CONFIG_KERNEL_BUILD_USER="call110"' >>.config ||
+    sed -i 's@\(CONFIG_KERNEL_BUILD_USER=\).*@\1$"call110"@' .config
