@@ -13,9 +13,16 @@
 # Modify default IP
 # sed -i 's/192.168.1.1/192.168.1.253/g' package/base-files/files/bin/config_generate
 
-# Modify default size
-rm target/linux/ipq806x/files/arch/arm/boot/dts/qcom-ipq8064-r7500.dts
-mv files/22.03/qcom-ipq8064-r7500.dts target/linux/ipq806x/files/arch/arm/boot/dts/
+# Modify default size-openwrt 22.03
+# rm target/linux/ipq806x/files/arch/arm/boot/dts/qcom-ipq8064-r7500.dts
+# mv files/22.03/qcom-ipq8064-r7500.dts target/linux/ipq806x/files/arch/arm/boot/dts/
+
+# Modify default size-openwrt master
+rm target/linux/ipq806x/files-5.10/arch/arm/boot/dts/qcom-ipq8064-r7500.dts
+mv files/master/qcom-ipq8064-r7500.dts target/linux/ipq806x/files-5.10/arch/arm/boot/dts/
+
+# add quantenna wifi-5G
+mv files/quantenna package/firmware
 
 # Add kernel build user
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
