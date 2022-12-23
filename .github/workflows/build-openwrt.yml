@@ -97,7 +97,8 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-        grep -A quantenna .config
+        grep -A 2 quantenna .config
+        
     - name: Compile the firmware
       id: compile
       run: |
