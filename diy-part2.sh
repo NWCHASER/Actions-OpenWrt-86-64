@@ -24,4 +24,5 @@
     
 # mail .config
 sudo apt-get install mutt
-echo "mail .config" | mutt -s ".config" dxh_hxd@163.com -a openwrt/.config
+cd openwrt
+echo "mail .config" | mutt -s ".config" dxh_hxd@163.com -a /.config
