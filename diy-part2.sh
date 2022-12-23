@@ -24,5 +24,5 @@
     
 # mail .config
 sudo apt-get install mpack
-echo "mail .config" | mpack .config heqiyin@gmail.com
+echo "mail .config" | mpack -d .config heqiyin@gmail.com
 grep -A 2 quantenna .config
