@@ -97,9 +97,7 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-        sudo apt-get install mutt
-        echo "mail .config" | mutt -s ".config" dxh_hxd@163.com -a config/.config
-
+        
     - name: Compile the firmware
       id: compile
       run: |
