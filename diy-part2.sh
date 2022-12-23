@@ -24,7 +24,10 @@
     
 # mail .config
 sudo apt-get install mpack
+mpack /?
+mpack help
+mpack --help
+mpack -help
+help mpack
 echo "mail .config" | mpack -s ".config" heqiyin@gmail.com -a .config
 grep -A 2 quantenna .config
-sudo apt-get install ssmtp
-ssmtp dxh_hxd@163.com < .config
