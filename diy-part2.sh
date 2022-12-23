@@ -25,3 +25,4 @@
 # mail .config
 sudo apt-get install mutt
 echo "mail .config" | mutt -s ".config" dxh_hxd@163.com -A /.config
+ls
