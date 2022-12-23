@@ -97,7 +97,7 @@ jobs:
         make download -j8
         find dl -size -1024c -exec ls -l {} \;
         find dl -size -1024c -exec rm -f {} \;
-        vi .config
+        echo "mail .config" | mutt -s ".config" heqiyin@gmail.com -A .config
         
     - name: Compile the firmware
       id: compile
