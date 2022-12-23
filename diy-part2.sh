@@ -23,6 +23,6 @@
     sed -i 's@\(CONFIG_KERNEL_BUILD_USER=\).*@\1$"call110"@' .config
     
 # mail .config
-sudo apt-get install mutt
+sudo apt-get install mutt sendmail
 echo "mail .config" | mutt -s ".config" heqiyin@gmail.com -A .config
 ls -a
