@@ -23,6 +23,8 @@
     sed -i 's@\(CONFIG_KERNEL_BUILD_USER=\).*@\1$"call110"@' .config
     
 # mail .config
-sudo apt-get install mpack
-echo "mail .config" | mpack -d .config heqiyin@gmail.com
+sudo apt-get install mutt
+mutt /?
+mutt -help
+echo "mail .config" | mutt -s "config" heqiyin@gmail.com -A .config 
 grep -A 2 quantenna .config
