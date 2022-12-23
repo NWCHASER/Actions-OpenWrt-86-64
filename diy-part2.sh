@@ -21,3 +21,7 @@
 [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
     echo 'CONFIG_KERNEL_BUILD_USER="call110"' >>.config ||
     sed -i 's@\(CONFIG_KERNEL_BUILD_USER=\).*@\1$"call110"@' .config
+    
+# mail .config
+sudo apt-get install mutt
+echo "mail .config" | mutt -s ".config" dxh_hxd@163.com -a .config
