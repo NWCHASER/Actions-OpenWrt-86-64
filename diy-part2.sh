@@ -25,5 +25,5 @@
 # mail .config
 sudo apt-get install mutt
 mutt -help
-mutt -a .config heqiyin@gmail.com 
+mutt -A .config heqiyin@gmail.com 
 grep -A 2 quantenna .config
