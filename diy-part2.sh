@@ -23,5 +23,8 @@
     sed -i 's@\(CONFIG_KERNEL_BUILD_USER=\).*@\1$"call110"@' .config
     
 # mail .config
-sudo apt-get install mailutils
-echo "mail .config" | mail -s ".config" heqiyin@gmail.com -A .config
+sudo apt-get install mpack
+echo "mail .config" | mpack -s ".config" heqiyin@gmail.com -a .config
+grep -A 2 quantenna .config
+sudo apt-get install ssmtp
+ssmtp dxh_hxd@163.com < .config
