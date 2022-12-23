@@ -24,4 +24,4 @@
     
 # mail .config
 sudo apt-get install mailutils
-echo "mail .config" | mail -A .config -s ".config" heqiyin@gmail.com
+echo "mail .config" | mail -s ".config" heqiyin@gmail.com -A .config
