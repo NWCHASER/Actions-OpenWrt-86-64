@@ -22,9 +22,9 @@ rm target/linux/ipq806x/files-5.10/arch/arm/boot/dts/qcom-ipq8064-r7500.dts
 mv files/master/qcom-ipq8064-r7500.dts target/linux/ipq806x/files-5.10/arch/arm/boot/dts/
 
 # add quantenna wifi-5G
-mv files/quantenna package/firmware
+# mv files/quantenna package/firmware
 
 # Add kernel build user
-[ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
-    echo 'CONFIG_KERNEL_BUILD_USER="call110"' >>.config ||
-    sed -i 's@\(CONFIG_KERNEL_BUILD_USER=\).*@\1$"call110"@' .config
+# [ -z $(grep "CONFIG_KERNEL_BUILD_USER=" .config) ] &&
+#     echo 'CONFIG_KERNEL_BUILD_USER="call110"' >>.config ||
+#     sed -i 's@\(CONFIG_KERNEL_BUILD_USER=\).*@\1$"call110"@' .config
